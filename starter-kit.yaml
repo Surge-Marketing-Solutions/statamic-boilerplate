@@ -15,7 +15,7 @@ export_paths:
 dependencies:
   aryehraber/statamic-captcha: ^1.9
   joetannenbaum/antlers-stack-tags: ^0.1.0
-  spatie/statamic-responsive-images: ^2.15
+  pecotamic/sitemap: ^1.4
   surgems/env-condition: ^2.0
   surgems/inliner: ^1.0
   swiftmade/statamic-clear-assets: ^1.1
