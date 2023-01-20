@@ -1,0 +1,9 @@
+{
+    "name": "surge-marketing-solutions/statamic-boilerplate",
+    "extra": {
+        "statamic": {
+            "name": "Statamic Boilerplate",
+            "description": "Statamic Boilerplate starter kit"
+        }
+    }
+}

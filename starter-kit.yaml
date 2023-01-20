@@ -1,0 +1,21 @@
+export_paths:
+  - config/statamic/antlers.php
+  - content
+  - public/assets
+  - public/js
+  - public/css
+  - public/vendor
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/js
+  - resources/sass
+  - resources/views
+  - package.json
+  - webpack.mix.js
+dependencies:
+  aryehraber/statamic-captcha: ^1.9
+  joetannenbaum/antlers-stack-tags: ^0.1.0
+  spatie/statamic-responsive-images: ^2.15
+  surgems/env-condition: ^2.0
+  surgems/inliner: ^1.0
+  swiftmade/statamic-clear-assets: ^1.1

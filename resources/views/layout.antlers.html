@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <title>{{ meta_title or site:name }}</title>
+        {{ partial:templates/seo }}
+
+        {{ inliner src="css/app.css" minify="true" }}
+        {{ inliner src="css/tailwind.css" minify="true" }}
+        {{ stack:styles }}
+        {{ external_assets:styles }}
+    </head>
+
+    <body>
+        {{ partial:templates/header }}
+
+        {{ template_content }}
+
+        {{ partial:templates/footer }}
+
+        {{ inliner src="js/site.js" minify="true" }}
+        {{ inliner src="js/glide.js" minify="true" }}
+        {{ stack:scripts }}
+        {{ external_assets:scripts }}
+    </body>
+</html>

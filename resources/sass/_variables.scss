@@ -1,0 +1,98 @@
+// Fonts
+
+@mixin primary($fw: 400, $fs: 1rem, $c: $black) {
+    font: {
+        family: sans-serif;
+        weight: $fw;
+        size: $fs;
+    }
+    color: $c;
+}
+
+// Helpers
+
+@mixin flex($ai: auto, $jc: auto, $fd: auto, $fw: auto) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+}
+
+@mixin grid($gtc: auto, $cg: auto, $rg: auto) {
+    display: grid;
+    grid-template-columns: $gtc;
+    column-gap: $cg;
+    row-gap: $rg;
+}
+
+@mixin svg-size($w, $h:$w) {
+    width: $w;
+    height: $h;
+    min-width: $w;
+    min-height: $h;
+}
+
+@mixin pos-abs() {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin pos-fix() {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@mixin bg-img($fit: cover, $position: top) {
+    @include pos-abs();
+    width: 100%;
+    height: 100%;
+    object-fit: $fit;
+    object-position: $position;
+}
+
+@mixin btn() {
+    all: unset;
+}
+
+@mixin svg-list($type, $gap: 10px, $width: 20px, $height: $width) {
+    li {
+        @include flex(center);
+        list-style-type: none;
+        position: relative;
+        padding-left: $width + $gap;
+        margin-left: 0;
+
+        &:before {
+            @include pos-abs();
+            content: "";
+            top: 2px;
+            width: $width;
+            height: $height;
+            background-size: $width $height;
+
+            @if $type {
+                background-image: url("data:image/svg+xml,%3Csvg id='check-circle-07' xmlns='http://www.w3.org/2000/svg' width='18.1' height='16.893' viewBox='0 0 18.1 16.893'%3E%3Cpath id='Path_42' data-name='Path 42' d='M6.051,8.4a1.195,1.195,0,1,0-1.689,1.689L6.775,12.5a1.166,1.166,0,0,0,1.689,0l8.447-8.447a1.166,1.166,0,0,0,0-1.689,1.166,1.166,0,0,0-1.689,0l-7.6,7.6Z' transform='translate(0.827 -2)' fill='%23e37315'/%3E%3Cpath id='Path_43' data-name='Path 43' d='M8.447,18.893a8.4,8.4,0,0,0,8.447-8.447,1.207,1.207,0,0,0-2.413,0A5.975,5.975,0,0,1,8.447,16.48a5.975,5.975,0,0,1-6.033-6.033A5.975,5.975,0,0,1,8.447,4.413a6.129,6.129,0,0,1,2.051.362,1.255,1.255,0,0,0,1.569-.724,1.255,1.255,0,0,0-.724-1.569A8.112,8.112,0,0,0,8.447,2a8.447,8.447,0,1,0,0,16.893Z' transform='translate(0 -2)' fill='%23e37315'/%3E%3C/svg%3E%0A");
+            } 
+            @else {
+                @error "Unknown type: #{$direction}.";
+            }
+        }
+    }
+}
+
+// Variables
+
+$small: "only screen and (min-width: 500px)";
+$medium: "only screen and (min-width: 768px)";
+$large: "only screen and (min-width: 992px)";
+$x-large: "only screen and (min-width: 1200px)";
+$xx-large: "only screen and (min-width: 1536px)";
+
+$nav-height-sm: 0;
+$nav-height-lg: 0;
+
+$black:#000;
+$white:#FFF;

@@ -1,0 +1,26 @@
+{{ push:styles once="true" }}
+    {{ stylesheets }}
+{{ /push:styles }}
+
+{{ hero-count = 0 }}
+
+<main>
+    {{ page_builder }}
+        {{ push:styles once="true" }}
+
+            {{ if type == 'hero' }}
+                {{ if hero-count < 1 }}
+                    {{ hero-count = hero-count + 1 }}
+                    {{ inliner src="css/partials/hero.css" minify="true" }}
+                {{ endif }}
+            {{ endif }}
+
+        {{ /push:styles }}
+
+        {{ partial:partials/{ type|slugify } }}
+    {{ /page_builder }}
+</main>
+
+{{ push:scripts once="true" }}
+    {{ scripts }}
+{{ /push:scripts }}
