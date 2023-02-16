@@ -4,7 +4,7 @@ export_paths:
   - public/assets
   - public/js
   - public/css
-  - public/vendor
+  - public/robots.txt
   - resources/blueprints
   - resources/fieldsets
   - resources/js
