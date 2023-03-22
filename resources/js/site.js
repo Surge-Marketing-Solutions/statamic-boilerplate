@@ -1,26 +1,5 @@
 import './animations';
-
-// Responsive Assets
-
 import LazyLoad from "vanilla-lazyload";
-
-window.addEventListener('load', function () {
-    new LazyLoad();
-
-    window.responsiveResizeObserver = new ResizeObserver((entries) => {
-        entries.forEach(entry => {
-            const imgWidth = entry.target.getBoundingClientRect().width;
-            entry.target.parentNode.querySelectorAll('source').forEach((source) => {
-                source.sizes = Math.ceil(imgWidth / window.innerWidth * 100) + 'vw';
-            });
-        });
-    });
-
-    document.querySelectorAll('[data-statamic-responsive-images]').forEach(responsiveImage => {
-        responsiveResizeObserver.onload = null;
-        responsiveResizeObserver.observe(responsiveImage);
-    });
-});
 
 
 // Form Submit && Captcha
@@ -104,3 +83,8 @@ if (accordions || accordions.length) {
         });
     })
 }
+
+
+window.addEventListener('DOMContentLoaded', function () {
+    new LazyLoad();
+});

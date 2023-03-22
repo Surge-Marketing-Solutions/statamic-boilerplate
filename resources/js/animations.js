@@ -1,4 +1,4 @@
-import anime from 'animejs/lib/anime.es.js';
+// import anime from 'animejs/lib/anime.es.js';
 
 // Helpers 
 
@@ -17,7 +17,7 @@ const scrollPercent = function (container, speed = 0, offset = 0) {
 
 const scrollAnim = (reveal) => {
     reveal.forEach(element => {
-        let trigger = window.innerHeight / (element.getAttribute("reveal-trigger") ? parseInt(element.getAttribute("reveal-trigger")) : 1.2);
+        let trigger = windowHt / (element.getAttribute("reveal-trigger") ? parseInt(element.getAttribute("reveal-trigger")) : 1.2);
         let elPos = element.getBoundingClientRect().top;
 
         if (elPos < trigger) element.classList.add('revealed');
@@ -30,10 +30,6 @@ const scrollAnim = (reveal) => {
 
 window.addEventListener("DOMContentLoaded", () => {
     scrollAnim(document.querySelectorAll(".reveal"));
-
-    window.addEventListener('resize', () => {
-        //
-    })
 
     window.addEventListener('scroll', () => {
         scrollAnim(document.querySelectorAll(".reveal"));

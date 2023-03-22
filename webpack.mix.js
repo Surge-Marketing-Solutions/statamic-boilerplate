@@ -7,6 +7,8 @@ const getFiles = (dir) => {
     });
 }
 
+mix.setPublicPath('public');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

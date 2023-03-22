@@ -1,5 +1,10 @@
 export_paths:
   - config/statamic/antlers.php
+  - config/statamic/assets.php
+  - config/statamic/cp.php
+  - config/statamic/editions.php
+  - config/statamic/static_caching.php
+  - config/captcha.php
   - content
   - public/assets
   - public/js
@@ -10,12 +15,13 @@ export_paths:
   - resources/js
   - resources/sass
   - resources/views
+  - .env.example
   - package.json
   - webpack.mix.js
 dependencies:
   aryehraber/statamic-captcha: ^1.9
   joetannenbaum/antlers-stack-tags: ^0.1.0
   pecotamic/sitemap: ^1.4
-  surgems/env-condition: ^2.0
   surgems/inliner: ^1.0
+  surgems/redirect-urls: ^1.2
   swiftmade/statamic-clear-assets: ^1.1
