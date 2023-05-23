@@ -5,49 +5,55 @@ fields:
     field:
       fields:
         -
-          handle: text
+          handle: text_field
           field:
             input_type: text
             antlers: false
-            display: Text
             type: text
+            display: Text
             icon: text
             listable: hidden
             instructions_position: above
             visibility: visible
-            always_save: false
+            hide_display: false
+            validate:
+              - required
         -
           handle: link
           field:
-            display: Link
             type: link
+            display: Link
             icon: link
+            width: 50
             listable: hidden
             instructions_position: above
             visibility: visible
-            always_save: false
+            hide_display: false
         -
           handle: asset
           field:
+            max_files: 1
             mode: list
             container: assets
             restrict: false
             allow_uploads: true
             show_filename: true
-            max_files: 1
-            display: Asset
+            show_set_alt: true
             type: assets
+            display: Asset
             icon: assets
+            width: 50
             listable: hidden
             instructions_position: above
             visibility: visible
-            always_save: false
-      mode: table
+            hide_display: false
+      mode: stacked
       reorderable: true
-      display: Buttons
+      fullscreen: true
       type: grid
+      display: Buttons
       icon: grid
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false

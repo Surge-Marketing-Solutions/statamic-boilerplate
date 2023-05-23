@@ -5,16 +5,24 @@ fields:
     field:
       collapse: false
       previews: true
+      fullscreen: true
       sets:
-        hero:
-          display: Hero
-          fields:
-            -
-              import: hero
-      display: 'Page Builder'
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            hero:
+              display: Hero
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: hero
       type: replicator
+      display: 'Page Builder'
       icon: replicator
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false

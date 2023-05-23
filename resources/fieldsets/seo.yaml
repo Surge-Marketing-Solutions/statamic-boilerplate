@@ -5,105 +5,99 @@ fields:
     field:
       input_type: text
       antlers: false
-      display: 'Meta Title'
       type: text
+      display: 'Meta Title'
       icon: text
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false
   -
     handle: meta_description
     field:
       antlers: false
-      display: 'Meta Description'
       type: textarea
+      display: 'Meta Description'
       icon: textarea
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
-  -
-    handle: thumbnail
-    field:
-      mode: list
-      container: assets
-      restrict: false
-      allow_uploads: true
-      show_filename: true
-      max_files: 1
-      display: Thumbnail
-      type: assets
-      icon: assets
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      always_save: false
+      hide_display: false
   -
     handle: schema
     field:
+      theme: material
+      mode: htmlmixed
+      mode_selectable: true
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
       antlers: false
+      type: code
       display: Schema
-      type: textarea
-      icon: textarea
+      icon: code
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false
   -
     handle: noindex_page
     field:
       default: false
-      display: 'No-Index Page'
       type: toggle
+      display: 'No-Index Page'
       icon: toggle
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false
   -
     handle: canonical_tag
     field:
-      display: 'Canonical Tag'
       type: link
+      display: 'Canonical Tag'
       icon: link
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false
   -
     handle: stylesheets
     field:
       theme: material
       mode: htmlmixed
-      mode_selectable: false
+      mode_selectable: true
       indent_type: tabs
       indent_size: 4
       key_map: default
       line_numbers: true
       line_wrapping: true
-      display: Stylesheets
+      antlers: false
       type: code
+      display: Stylesheets
       icon: code
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false
   -
     handle: scripts
     field:
       theme: material
       mode: htmlmixed
-      mode_selectable: false
+      mode_selectable: true
       indent_type: tabs
       indent_size: 4
       key_map: default
       line_numbers: true
       line_wrapping: true
-      display: Scripts
+      antlers: false
       type: code
+      display: Scripts
       icon: code
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
+      hide_display: false

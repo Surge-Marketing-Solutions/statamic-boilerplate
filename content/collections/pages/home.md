@@ -1,17 +1,15 @@
 ---
-id: cc002f50-9b9f-4f4f-a9e6-f57a2a4ae9fc
+id: ca71e2f3-8734-4903-965f-5a035bf77a1e
 blueprint: page
-noindex_page: false
 title: Home
-author: b18aba5b-6ffa-44a4-9b66-ae15a2fd04d4
 page_builder:
   -
-    id: ld3mpirm
+    id: li0bw1li
     hero:
       -
-        id: ld3mpji0
+        id: li0bw270
         content: |-
-          ## Welcome to your new brand Statamic site!
+          ## Welcome to your brand new Statamic site!
 
           Not sure where to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
 
@@ -25,6 +23,16 @@ page_builder:
         enabled: true
     type: hero
     enabled: true
-updated_by: b18aba5b-6ffa-44a4-9b66-ae15a2fd04d4
-updated_at: 1674165178
+schema:
+  code: null
+  mode: htmlmixed
+noindex_page: false
+stylesheets:
+  code: null
+  mode: htmlmixed
+scripts:
+  code: null
+  mode: htmlmixed
+updated_by: 5eb44808-b069-4ab8-89ac-00ec242f7025
+updated_at: 1684849794
 ---

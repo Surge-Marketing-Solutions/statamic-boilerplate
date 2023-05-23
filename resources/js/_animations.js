@@ -6,7 +6,6 @@ const windowHt = window.innerHeight;
 const windowWd = window.innerWidth;
 
 const scrollPercent = function (container, speed = 0, offset = 0) {
-    // get the scroll percent of the containers
     let scrollPercent = window.pageYOffset - container.offsetTop + offset;
     if (speed) scrollPercent /= speed;
     return scrollPercent;

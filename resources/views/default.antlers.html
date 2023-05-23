@@ -2,24 +2,13 @@
     {{ stylesheets }}
 {{ /push:styles }}
 
-{{ hero-count = 0 }}
+{{ page_builder }}
+    {{ push:styles once="true" }}
+        {{ vite src="resources/sass/partials/{ type | slugify }.scss" }}
+    {{ /push:styles }}
 
-<main>
-    {{ page_builder }}
-        {{ push:styles once="true" }}
-
-            {{ if type == 'hero' }}
-                {{ if hero-count < 1 }}
-                    {{ hero-count = hero-count + 1 }}
-                    {{ inliner src="css/partials/hero.css" minify="true" }}
-                {{ endif }}
-            {{ endif }}
-
-        {{ /push:styles }}
-
-        {{ partial:partials/{ type|slugify } }}
-    {{ /page_builder }}
-</main>
+    {{ partial:partials/{ type|slugify } }}
+{{ /page_builder }}
 
 {{ push:scripts once="true" }}
     {{ scripts }}

@@ -63,11 +63,14 @@ return [
     | Pagination
     |--------------------------------------------------------------------------
     |
-    | The numbers of items to show on each paginated page.
+    | Here you may define the default pagination size as well as the options
+    | the user can select on any paginated listing in the Control Panel.
     |
     */
 
     'pagination_size' => 25,
+
+    'pagination_size_options' => [10, 25, 50, 100, 500],
 
     /*
     |--------------------------------------------------------------------------
@@ -115,7 +118,7 @@ return [
     |
     */
 
-    'custom_cms_name' => env('APP_NAME', 'Statamic'),
+    'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Statamic'),
 
     'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL', null),
 

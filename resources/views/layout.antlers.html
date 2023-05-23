@@ -4,22 +4,26 @@
         <title>{{ meta_title or site:name }}</title>
         {{ partial:templates/seo }}
 
-        {{ inliner src="css/app.css" minify="true" }}
-        {{ inliner src="css/tailwind.css" minify="true" }}
+        {{ vite src="resources/sass/app.scss|resources/css/site.css" }}
         {{ stack:styles }}
-        {{ external_assets:styles }}
     </head>
 
     <body>
         {{ partial:templates/header }}
 
-        {{ template_content }}
+        <main>
+            {{ template_content }}
+        </main>
 
         {{ partial:templates/footer }}
 
-        {{ inliner src="js/site.js" minify="true" }}
-        {{ inliner src="js/glide.js" minify="true" }}
+        {{ vite src="resources/js/site.js|resources/js/glide.js" }}
         {{ stack:scripts }}
-        {{ external_assets:scripts }}
+
+        {{ if environment == 'staging' }}
+            {{ plugins:staging_scripts }}
+        {{ elseif environment == 'production' }}
+            {{ plugins:live_scripts }}
+        {{ endif }}
     </body>
 </html>
