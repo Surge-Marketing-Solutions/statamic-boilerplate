@@ -3,9 +3,9 @@ export_paths:
   - config/statamic/cp.php
   - config/statamic/editions.php
   - config/captcha.php
-  - content/collections/pages
+  - content
   - public/robots.txt
-  - resources/blueprints/collections/pages
+  - resources/blueprints
   - resources/fieldsets
   - resources/js
   - resources/sass
