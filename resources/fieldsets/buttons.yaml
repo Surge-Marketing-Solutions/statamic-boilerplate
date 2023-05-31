@@ -5,7 +5,7 @@ fields:
     field:
       fields:
         -
-          handle: text_field
+          handle: text
           field:
             input_type: text
             antlers: false

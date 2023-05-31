@@ -82,6 +82,7 @@ return [
         */
 
         'defaults' => [
+            'format' => 'webp',
             'quality' => 85,
         ],
 

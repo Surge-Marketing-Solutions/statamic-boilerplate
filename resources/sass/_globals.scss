@@ -191,6 +191,11 @@
     }
 
     // Button
+    .btns {
+        @include flex();
+        gap: 10px;
+    }
+
     .btn {
         @include btn();
     }

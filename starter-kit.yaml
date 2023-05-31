@@ -5,11 +5,7 @@ export_paths:
   - config/captcha.php
   - content
   - public/robots.txt
-  - resources/blueprints
-  - resources/fieldsets
-  - resources/js
-  - resources/sass
-  - resources/views
+  - resources
   - .env.example
   - .gitattributes
   - package.json
