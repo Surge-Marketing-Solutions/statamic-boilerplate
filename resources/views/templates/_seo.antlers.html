@@ -8,10 +8,10 @@
 <meta property="og:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
 <meta property="og:url" content="{{ current_url }}" />
 <meta property="og:locale" content="en" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ meta_title or title }} | {{ site:name }}" />
 <meta name="twitter:description" content="{{ meta_description }}" />
-<meta property="twitter:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
+<meta name="twitter:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
 <link rel="canonical" href="{{ canonical_tag or current_url }}" />
 <link rel="alternate" media="only screen and (max-width: 640px)"  href="{{ current_url }}" />
 {{ if noindex_page }}<meta name="robots" content="noindex, nofollow" />{{ endif }}
