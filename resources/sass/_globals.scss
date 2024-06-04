@@ -49,6 +49,12 @@
             outline-color: default;
         }
 
+        select {
+            option {
+                color: $black;
+            }
+        }
+
         .file {
             @include flex(center);
             gap: 10px;
