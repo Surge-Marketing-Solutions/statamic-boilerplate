@@ -21,16 +21,20 @@ const initHeader = (header) => {
 // Form Submit && Captcha
 
 const loadCaptcha = (forms) => {
-    forms.forEach(form => {
-        setTimeout(() => {form.classList.add('captcha-loaded')}, 500)
-        form.removeEventListener('input', loadCaptcha);
-    })
-
-    const head = document.getElementsByTagName('head')[0];
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    head.appendChild(script);
+    var forms = document.querySelectorAll('form');
+    var loadCaptcha = function loadCaptcha(e) {
+        forms.forEach(function (form) {
+            setTimeout(function () {
+                form.classList.add('captcha-loaded');
+            }, 500);
+            form.removeEventListener('input', loadCaptcha);
+        });
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://www.google.com/recaptcha/api.js';
+        head.appendChild(script);
+    };
 }
 
 const initForms = (forms) => {

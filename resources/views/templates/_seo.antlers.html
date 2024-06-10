@@ -4,13 +4,13 @@
 <meta name="description" content="{{ meta_description }}" />
 <meta property="og:type" content="website" />
 <meta name="og:title" content="{{ meta_title or title }} | {{ site:name }}" />
-<meta property="og:description" content="{{ meta_description }}" />
+<meta property="og:description" content="{{ meta_description or title }}" />
 <meta property="og:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
 <meta property="og:url" content="{{ current_url }}" />
 <meta property="og:locale" content="en" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ meta_title or title }} | {{ site:name }}" />
-<meta name="twitter:description" content="{{ meta_description }}" />
+<meta name="twitter:description" content="{{ meta_description or title }}" />
 <meta name="twitter:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
 <link rel="canonical" href="{{ canonical_tag or current_url }}" />
 <link rel="alternate" media="only screen and (max-width: 640px)"  href="{{ current_url }}" />
