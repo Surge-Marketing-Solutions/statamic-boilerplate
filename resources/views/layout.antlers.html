@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ site:short_locale }}">
     <head>
-        <title>{{ meta_title or site:name }}</title>
+        <title>{{ meta_title or title }} | {{ site:name }}</title>
         {{ partial:templates/seo }}
 
         {{ vite src="resources/sass/app.scss|resources/css/site.css" }}
