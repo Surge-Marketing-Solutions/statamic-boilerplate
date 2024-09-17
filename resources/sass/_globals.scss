@@ -106,9 +106,6 @@
         }
 
         .captcha {
-            height: 80px;
-            overflow: hidden;
-
             .captcha-placeholder {
                 @include svg-size(304px, auto);
             }
