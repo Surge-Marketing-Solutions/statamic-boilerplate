@@ -1,0 +1,100 @@
+/* Variables */
+:root {
+    --lightBackgroundColor: #fbfbfb;
+    --darkerBackgroundColor: #f6f6f7;
+    --borderColor: #d2d7da;
+    --accentColor: #3AAA35;
+}
+
+* {
+    border: 0 solid var(--borderColor) !important;
+}
+
+body {
+    background-color: var(--darkerBackgroundColor) !important;
+}
+
+.outside {
+    background-color: var(--darkerBackgroundColor) !important;
+}
+
+.grid-item-header {
+    background-color: var(--darkerBackgroundColor) !important;
+}
+
+.bg-grey-10,
+.bg-grey-20 {
+    background-color: var(--darkerBackgroundColor) !important;
+}
+
+.global-header {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.nav-main {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.dropdown-list .popover-content a:hover {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.input-text,
+input.slug:focus,
+input.slug:hover {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.assets-fieldtype .assets-fieldtype-picker {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.blueprint-section-field .blueprint-section-field-inner {
+    background-color: var(--lightBackgroundColor) !important;
+}
+
+.btn-primary {
+    background: var(--lightBackgroundColor) !important;
+    border: 1px solid var(--borderColor) !important;
+    color: var(--accentColor) !important;
+    box-shadow: none !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--darkerBackgroundColor) !important;
+    border: 1px solid var(--borderColor) !important;
+    color: var(--accentColor) !important;
+    box-shadow: none !important;
+}
+
+.rotating-dots-button:focus {
+    box-shadow: 0 0 0 0.2rem var(--accentColor) !important;
+}
+
+a:hover {
+    color: var(--accentColor) !important;
+}
+
+.text-blue {
+    color: var(--accentColor) !important;
+}
+
+.data-table .sortable-column:hover {
+    color: var(--accentColor) !important;
+}
+
+.icon-user-initials {
+    background-color: var(--accentColor) !important;
+}
+
+.bg-pink {
+    background-color: var(--accentColor) !important;
+}
+
+.upload-text-button {
+    color: var(--accentColor) !important;
+}

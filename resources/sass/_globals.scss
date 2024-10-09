@@ -27,6 +27,14 @@
         section {
             position: relative;
         }
+
+        .swiper {
+            .swiper-wrapper {
+                -webkit-transition-timing-function: linear;
+                -o-transition-timing-function: linear;
+                transition-timing-function: linear;
+            }
+        }
     }
 
     // Forms
