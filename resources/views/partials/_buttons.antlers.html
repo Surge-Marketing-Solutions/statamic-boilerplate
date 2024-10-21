@@ -1,0 +1,17 @@
+{{ if buttons }}
+    <div class="btns">
+        {{ buttons }}
+            <a href="{{ link }}" class="btn">
+                {{ if icon }}
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
+                        <source media="(max-width: 1199px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
+                        <img loading="lazy" src="{{ icon }}" width="100%" height="100%" alt="{{ icon:alt }}">
+                    </picture>
+                {{ endif }}
+
+                {{ text }}
+            </a>
+        {{ /buttons }}
+    </div>
+{{ endif }}

@@ -5,25 +5,42 @@ fields:
     field:
       fields:
         -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
           handle: text
           field:
             input_type: text
             antlers: false
             type: text
             display: Text
-            icon: text
             listable: hidden
             instructions_position: above
             visibility: visible
             hide_display: false
             validate:
               - required
+            width: 50
         -
           handle: link
           field:
             type: link
             display: Link
-            icon: link
             width: 50
             listable: hidden
             instructions_position: above
@@ -41,7 +58,6 @@ fields:
             show_set_alt: true
             type: assets
             display: Asset
-            icon: assets
             width: 50
             listable: hidden
             instructions_position: above
@@ -52,8 +68,8 @@ fields:
       fullscreen: true
       type: grid
       display: Buttons
-      icon: grid
       listable: hidden
       instructions_position: above
       visibility: visible
       hide_display: false
+      replicator_preview: true
