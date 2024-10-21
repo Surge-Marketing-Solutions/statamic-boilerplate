@@ -26,6 +26,13 @@
 
         section {
             position: relative;
+            padding: 40px 0;
+
+            .wrapper {
+                max-width: 1216px;
+                width: 100%;
+                margin: 0 auto;
+            }
         }
 
         h1 {
@@ -328,6 +335,10 @@
     * {
         body {
             padding-top: $nav-height-lg;
+
+            section {
+                padding: 80px 0;
+            }
 
             h1 {
                 @include primary(800, 6rem, $black);
