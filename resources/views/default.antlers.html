@@ -2,13 +2,24 @@
     {{ stylesheets }}
 {{ /push:styles }}
 
-{{ page_builder }}
-    {{ push:styles once="true" }}
-        {{ vite src="resources/sass/partials/{ type | slugify }.scss" }}
-    {{ /push:styles }}
+{{ if blueprint:handle === 'cookie_report' }}
 
-    {{ partial:partials/{ type|slugify } }}
-{{ /page_builder }}
+    {{ push:styles once="true" }}
+        {{ vite src="resources/sass/partials/cookie-report.scss" }}
+    {{ /push:styles }}
+    {{ partial:partials/cookie-report }}
+
+{{ else }}
+
+    {{ page_builder }}
+        {{ push:styles once="true" }}
+            {{ vite src="resources/sass/partials/{ type | slugify }.scss" }}
+        {{ /push:styles }}
+
+        {{ partial:partials/{ type|slugify } }}
+    {{ /page_builder }}
+
+{{ endif }}
 
 {{ push:scripts once="true" }}
     {{ scripts }}
