@@ -11,6 +11,8 @@
             {{ if validate|contains:required }}required{{ /if }}
         >
         {{ label !== null ? label : value }}
+
+        <span class="checkmark"></span>
     </label>
     {{ unless inline }}
         <br>

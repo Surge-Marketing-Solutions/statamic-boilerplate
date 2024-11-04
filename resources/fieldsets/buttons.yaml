@@ -47,6 +47,18 @@ fields:
             visibility: visible
             hide_display: false
         -
+          handle: new_window
+          field:
+            default: false
+            type: toggle
+            display: 'New Window'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
           handle: asset
           field:
             max_files: 1

@@ -19,10 +19,21 @@ tabs:
               antlers: false
               type: code
               display: 'Live Scripts'
-              icon: code
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
+          -
+            handle: live_ga_id
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Live GA ID'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
               hide_display: false
       -
         display: Staging
@@ -41,8 +52,19 @@ tabs:
               antlers: false
               type: code
               display: 'Staging Scripts'
-              icon: code
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
+          -
+            handle: staging_ga_id
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Staging GA ID'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
               hide_display: false

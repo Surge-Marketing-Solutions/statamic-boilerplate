@@ -1,7 +1,7 @@
 {{ if buttons }}
     <div class="btns">
         {{ buttons }}
-            <a href="{{ link }}" class="btn">
+            <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="btn">
                 {{ if icon }}
                     <picture>
                         <source media="(min-width: 1200px)" srcset="{{ glide:icon width='24' }}" type="image/webp">

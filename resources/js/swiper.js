@@ -93,7 +93,7 @@ const swiper = (carousel) => {
         swiperOptions.breakpoints = {
             ...swiperOptions.breakpoints,
             375: {
-                slidesPerView: carousel.getAttribute('swiper-slidesPerView-ms'),
+                slidesPerView: carousel.getAttribute('swiper-slidesPerView-sm'),
             }
         }
     }

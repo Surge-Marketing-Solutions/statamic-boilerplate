@@ -157,6 +157,71 @@
             height: 145px;
         }
 
+        .checkboxes {
+            margin-top: 16px;
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+
+            label+label {
+                @include flex(center, flex-end, row-reverse);
+                gap: 16px;
+                line-height: 1;
+
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #eee;
+                    cursor: pointer;
+                    transition: all .3s ease;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        transition: opacity .3s ease;
+                    }
+                }
+
+                input:checked~.checkmark {
+                    background-color: #3AAA35;
+                }
+
+                input:checked~.checkmark:after {
+                    opacity: 1;
+                    left: 8px;
+                    top: 4px;
+                    width: 8px;
+                    height: 15px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+            }
+        }
+
         label {
             @include primary();
             margin-bottom: 5px;
