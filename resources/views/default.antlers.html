@@ -11,13 +11,24 @@
 
 {{ else }}
 
-    {{ page_builder }}
-        {{ push:styles once="true" }}
-            {{ vite src="resources/sass/partials/{ type | slugify }.scss" }}
-        {{ /push:styles }}
+    {{ if page_builder }}
 
-        {{ partial:partials/{ type|slugify } }}
-    {{ /page_builder }}
+        {{ page_builder }}
+            {{ push:styles once="true" }}
+                {{ vite src="resources/sass/partials/{ type | slugify }.scss" }}
+            {{ /push:styles }}
+
+            {{ partial:partials/{ type|slugify } }}
+        {{ /page_builder }}
+
+    {{ else }}
+
+        {{ push:styles once="true" }}
+            {{ vite src="resources/sass/partials/coming-soon.scss" }}
+        {{ /push:styles }}
+        {{ partial:coming-soon }}
+
+    {{ endif }}
 
 {{ endif }}
 
