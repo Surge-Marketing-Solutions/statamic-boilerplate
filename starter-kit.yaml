@@ -16,3 +16,5 @@ dependencies:
   pecotamic/sitemap: ^1.4
   surgems/redirect-urls: ^2.1
   osayaweventures/share-links: ^1.0.1
+  statamic/cms: ^5.0
+  php: ^8.2
