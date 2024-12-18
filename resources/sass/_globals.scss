@@ -127,7 +127,32 @@
 
         .fields {
             @include flex($fd: column);
-            gap: 15px;
+            gap: 16px;
+
+            .field {
+                &.flex-25, &.flex-33, &.flex-50, &.flex-66, &.flex-75, &.flex-100 {
+                    flex-basis: 100%;
+                }
+
+                .instruction {
+                    @include primary(600, 1rem, $bockettsGarden);
+                    padding-top: 8px;
+                }
+
+                .radio-wrapper {
+                    @include flex(center, flex-end, row-reverse);
+                    gap: 8px;
+                    padding-top: 12px;
+
+                    @include primary(400, 1.125rem, $black);
+
+                    input {
+                        width: 24px;
+                        height: 24px;
+                        margin-top: -3px;
+                    }
+                }
+            }
         }
 
         input, select, textarea {
@@ -357,26 +382,47 @@
 
     .btn {
         @include btn();
-    }
+        padding: 15px 20px 12px;
+        width: fit-content;
+        @include flex(center, center, row);
+        border-radius: 6px;
+        background: $brand;
+        @include primary(700, 1rem, $white);
+        border: solid 2px $brand;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        transition: all .3s ease;
 
-    // Glide 
-    .glide {
-        .glide__controls {
-            @include flex();
-            gap: 12px;
+        &.full-w-btn {
+            width: auto;
+        }
 
-            button {
-                all: unset;
-                cursor: pointer;
+        &:focus {
+            background: $brandDark;
+            border-color: $brandLight;
+        }
+
+        &:hover {
+            background: $brandDark;
+            border-color: $brandDark;
+        }
+
+        &.outline-btn {
+            background: rgba($brandDark, .25);
+            border: solid 2px $white;
+
+            &:focus {
+                border-color: $brandLight;
+            }
+
+            &:hover {
+                background: $white;
+                color: $black;
             }
         }
 
-        .glide__slides {
-            cursor: grab;
-
-            &:active, &:focus {
-                cursor: grabbing;
-            }
+        &.pill-btn {
+            border-radius: 40px;
         }
     }
 
@@ -418,7 +464,55 @@
     }
 }
 
-@media #{$x-large} {
+@media #{ $large } {
+    * {
+        form {
+            .privacy-policy, .additional-text {
+                p {
+                    font-size: 1.125rem;
+                }
+    
+                a {
+                    font-size: 1.125rem;
+                }
+            }
+
+            .fields {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                .field {
+                    &.flex-25 {
+                        flex-basis: calc(25% - 14px);
+                    } 
+
+                    &.flex-33 {
+                        flex-basis: calc(33% - 12px);
+                    }
+                    &.flex-50 {
+                        flex-basis: calc(50% - 8px);
+                    } 
+                    
+                    &.flex-66 {
+                        flex-basis: calc(66% - 6px);
+                    }
+                    
+                    &.flex-75 {
+                        flex-basis: calc(75% - 4px);
+                    } 
+                    
+                    &.flex-100 {
+                        flex-basis: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $x-large } {
     * {
         body {
             padding-top: $nav-height-lg;
@@ -429,11 +523,6 @@
 
             h1 {
                 font-size: 6rem;
-    
-                // Create variations through classes like;
-                // .big {
-                //    font-size: 5rem;
-                // }
             }
     
             h2 {

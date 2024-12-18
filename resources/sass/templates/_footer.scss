@@ -3,30 +3,46 @@
 footer {
     padding: 30px 16px;
 
-    .bottom {
-        @include flex(center, space-between, $fd: column);
-        gap: 15px;
-
-        .copyright {
-            @include primary($fs: .875rem);
-            margin-bottom: 0;
+    .top {
+        .wrapper {
+            @include flex(center, center, column);
+            gap: 16px;
         }
+    }
 
-        .surge {
-            @include flex(center, $fd: column);
-            gap: 6px;
+    .bottom {
+        background: $black;
+        padding: 16px;
 
-            * {
-                @include primary($fs: .875rem);
+        .wrapper {
+            @include flex(center, space-between, $fd: column);
+            gap: 15px;
+            
+            .copyright {
+                @include primary(400, .875rem, $white);
                 margin-bottom: 0;
             }
+    
+            .surge {
+                @include flex(center, $fd: column);
+                gap: 6px;
+    
+                * {
+                    @include primary(400, .875rem, $white);
+                    margin-bottom: 0;
+                }
+    
+                > a, svg {
+                    @include svg-size(110px, 28px);
 
-            > a, svg {
-                @include svg-size(110px, 28px);
-
-                &:hover {
                     path {
-                        fill: #afca0b;
+                        transition: all .3s ease;
+                    }
+    
+                    &:hover {
+                        path {
+                            fill: $white;
+                        }
                     }
                 }
             }
@@ -34,21 +50,27 @@ footer {
     }
 }
 
-@media #{$small} {
+@media #{ $medium } {
     footer {
         .bottom {
-            .surge {
-                @include flex(center, center, $fd: row);
+            padding: 16px 32px;
+
+            .wrapper {
+                .surge {
+                    @include flex(center, center, $fd: row);
+                }
             }
         }
     }
 }
 
 
-@media #{$large} {
+@media #{ $large } {
     footer {
         .bottom {
-            flex-direction: row;
+            .wrapper {
+                flex-direction: row;
+            }
         }
     }
 }

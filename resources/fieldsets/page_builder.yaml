@@ -19,6 +19,13 @@ fields:
               fields:
                 -
                   import: hero
+            thank_you_conversion_events:
+              display: 'Thank You Conversion Events'
+              instructions: null
+              icon: programming-script-code-brackets
+              fields:
+                -
+                  import: ga_event
       type: replicator
       display: 'Page Builder'
       icon: replicator

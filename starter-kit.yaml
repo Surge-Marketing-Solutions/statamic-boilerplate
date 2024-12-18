@@ -11,7 +11,7 @@ export_paths:
   - package.json
   - vite.config.js
 dependencies:
-  aryehraber/statamic-captcha: ^1.10
+  aryehraber/statamic-captcha: ^1.13
   joetannenbaum/antlers-stack-tags: ^0.1.0
   pecotamic/sitemap: ^1.4
   surgems/redirect-urls: ^2.1
