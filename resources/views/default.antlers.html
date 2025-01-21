@@ -11,7 +11,7 @@
 
 {{ else }}
 
-    {{ if page_builder }}
+    {{ if page_builder || not_found }}
 
         {{ page_builder }}
             {{ push:styles once="true" }}
