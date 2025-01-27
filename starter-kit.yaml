@@ -11,10 +11,10 @@ export_paths:
   - package.json
   - vite.config.js
 dependencies:
+  statamic/cms: ^5.0
+  php: ^8.2
   aryehraber/statamic-captcha: ^1.13
   joetannenbaum/antlers-stack-tags: ^0.1.0
   pecotamic/sitemap: ^1.4
   surgems/redirect-urls: ^2.1
   osayaweventures/share-links: ^1.0.1
-  statamic/cms: ^5.0
-  php: ^8.2
