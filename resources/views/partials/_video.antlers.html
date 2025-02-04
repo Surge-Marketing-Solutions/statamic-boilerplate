@@ -8,7 +8,7 @@
     {{ else }}
 
         {{ if mp4 or hvc1 or webm}}
-            <video class="asset" width="100%" height="100%" loop {{ autoplay ? 'autoplay' : '' }} {{ muted ? 'muted' : '' }} {{ loop ? 'loop' : '' }} playsinline>
+            <video class="asset" width="100%" height="100%" {{ thumbnail ? 'poster="{ thumbnail }"' : '' }} {{ autoplay ? 'autoplay' : '' }} {{ muted ? 'muted' : '' }} {{ loop ? 'loop' : '' }} playsinline>
                 {{ if mp4 }}
                     <source src="{{ mp4 }}" type="video/mp4;">
                 {{ endif }}
