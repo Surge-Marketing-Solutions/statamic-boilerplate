@@ -24,6 +24,17 @@ fields:
       visibility: visible
       hide_display: false
   -
+    handle: schema_instructions
+    field:
+      type: section
+      display: 'Schema Instructions'
+      instructions: 'Please note that the script tags are automatically added. Only the JSON input is needed.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: schema
     field:
       theme: material
