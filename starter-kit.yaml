@@ -5,6 +5,7 @@ export_paths:
   - config/captcha.php
   - content
   - public/robots.txt
+  - public/fonts
   - resources
   - .env.example
   - .gitattributes

@@ -2,7 +2,7 @@
 
 @mixin primary($fw: 400, $fs: 1rem, $c: $black) {
     font: {
-        family: sans-serif;
+        family: "NAME OF FONT", sans-serif;
         weight: $fw;
         size: $fs;
     }
