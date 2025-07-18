@@ -1,15 +1,18 @@
 {
     "name": "surge-marketing-solutions/statamic-boilerplate",
-    "extra": {
-        "statamic": {
-            "name": "Statamic Boilerplate",
-            "description": "Statamic Boilerplate starter kit"
-        }
+    "require": {
+        "surgems/redirect-urls": "*"
     },
     "repositories": [
         {
             "type": "path",
             "url": "./local/redirect-urls/"
         }
-    ]
+    ],
+    "extra": {
+        "statamic": {
+            "name": "Statamic Boilerplate",
+            "description": "Statamic Boilerplate starter kit"
+        }
+    }
 }
