@@ -1,14 +1,5 @@
 {
     "name": "surge-marketing-solutions/statamic-boilerplate",
-    "require": {
-        "surgems/redirect-urls": "*"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./local/redirect-urls/"
-        }
-    ],
     "extra": {
         "statamic": {
             "name": "Statamic Boilerplate",
