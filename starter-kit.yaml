@@ -8,6 +8,7 @@ export_paths:
   - public/robots.txt
   - public/llms.txt
   - public/fonts
+  - public/theme
   - app/listeners
   - app/providers
   - resources
