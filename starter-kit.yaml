@@ -4,6 +4,7 @@ export_paths:
   - config/statamic/editions.php
   - config/captcha.php
   - content
+  - local
   - public/robots.txt
   - public/llms.txt
   - public/fonts
