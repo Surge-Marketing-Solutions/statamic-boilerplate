@@ -23,14 +23,27 @@ const scrollAnim = (reveal) => {
     });
 };
 
+// Scroll to Top
+
+const scrollTop = (scrollTop) => {
+    if( scrollTop.length > 0 ) {
+        if( scrollPercent(document.querySelector('body')) > 1500 ) {
+            scrollTop[0].style.opacity='1';
+        } else {
+            scrollTop[0].style.opacity='0';
+        }
+    }
+}
 
 
 // Anims Init
 
 window.addEventListener("DOMContentLoaded", () => {
     scrollAnim(document.querySelectorAll(".reveal"));
+    scrollTop(document.querySelectorAll('.back-to-top'));
 
     window.addEventListener('scroll', () => {
         scrollAnim(document.querySelectorAll(".reveal"));
+        scrollTop(document.querySelectorAll('.back-to-top'));
     }, {passive:true});
 });

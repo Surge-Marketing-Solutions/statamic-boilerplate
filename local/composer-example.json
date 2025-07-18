@@ -1,0 +1,11 @@
+{
+    "require": {
+        "surge/redirect-urls": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./local/redirect-urls/"
+        }
+    ]
+}

@@ -1,8 +1,6 @@
 @import '../variables';
 
 footer {
-    padding: 30px 16px;
-
     .top {
         .wrapper {
             @include flex(center, center, column);
@@ -11,7 +9,6 @@ footer {
     }
 
     .bottom {
-        background: $black;
         padding: 16px;
 
         .wrapper {
@@ -19,7 +16,7 @@ footer {
             gap: 15px;
             
             .copyright {
-                @include primary(400, .875rem, $white);
+                @include primary(400, 1rem, $black);
                 margin-bottom: 0;
             }
     
@@ -28,7 +25,7 @@ footer {
                 gap: 6px;
     
                 * {
-                    @include primary(400, .875rem, $white);
+                    @include primary(400, 1rem, $black);
                     margin-bottom: 0;
                 }
     

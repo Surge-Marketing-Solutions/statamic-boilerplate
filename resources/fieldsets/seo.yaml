@@ -3,112 +3,50 @@ fields:
   -
     handle: meta_title
     field:
-      input_type: text
-      antlers: false
       type: text
       display: 'Meta Title'
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
   -
     handle: meta_description
     field:
-      antlers: false
       type: textarea
       display: 'Meta Description'
-      icon: textarea
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
+  -
+    handle: sharing_image
+    field:
+      container: assets
+      type: assets
+      display: 'Sharing Image'
+      instructions: 'This image will be used for when people share this page on social media. If left blank it will use the image from <a href="/cp/globals/company_info" target="_blank">here.</a>'
+  -
+    handle: noindex_page
+    field:
+      type: toggle
+      display: 'No-Index Page'
+      width: 50
+  -
+    handle: canonical_tag
+    field:
+      type: text
+      display: 'Canonical Tag'
+      width: 50
   -
     handle: schema_instructions
     field:
       type: section
       display: 'Schema Instructions'
       instructions: 'Please note that the script tags are automatically added. Only the JSON input is needed.'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: schema
     field:
-      theme: material
-      mode: htmlmixed
-      mode_selectable: true
-      indent_type: tabs
-      indent_size: 4
-      key_map: default
-      line_numbers: true
-      line_wrapping: true
-      antlers: false
       type: code
       display: Schema
-      icon: code
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
-  -
-    handle: noindex_page
-    field:
-      default: false
-      type: toggle
-      display: 'No-Index Page'
-      icon: toggle
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
-  -
-    handle: canonical_tag
-    field:
-      type: link
-      display: 'Canonical Tag'
-      icon: link
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
   -
     handle: stylesheets
     field:
-      theme: material
-      mode: htmlmixed
-      mode_selectable: true
-      indent_type: tabs
-      indent_size: 4
-      key_map: default
-      line_numbers: true
-      line_wrapping: true
-      antlers: false
       type: code
       display: Stylesheets
-      icon: code
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
   -
     handle: scripts
     field:
-      theme: material
-      mode: htmlmixed
-      mode_selectable: true
-      indent_type: tabs
-      indent_size: 4
-      key_map: default
-      line_numbers: true
-      line_wrapping: true
-      antlers: false
       type: code
       display: Scripts
-      icon: code
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false

@@ -5,5 +5,11 @@
             "name": "Statamic Boilerplate",
             "description": "Statamic Boilerplate starter kit"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./local/redirect-urls/"
+        }
+    ]
 }
