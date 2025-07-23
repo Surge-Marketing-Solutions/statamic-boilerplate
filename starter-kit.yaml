@@ -9,6 +9,8 @@ export_paths:
   - public/llms.txt
   - public/fonts
   - public/theme
+  - public/logo.svg
+  - public/background-dots.svg
   - app/listeners
   - app/providers
   - resources

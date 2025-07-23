@@ -37,12 +37,12 @@
 /* ----------- */
 
 .outside {
-    background: linear-gradient(45deg, var(--green), var(--lightgreen));
+    background: linear-gradient(-45deg, var(--green), var(--lightgreen));
 }
 
 .outside::after {
     content: '';
-    background: url(/assets/background-dots.svg) no-repeat;
+    background: url(/background-dots.svg) no-repeat;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -50,6 +50,7 @@
     opacity: 0.03;
     bottom: 0;
     right: 0;
+    z-index: 1;
 }
 
 .outside #statamic {
@@ -169,7 +170,7 @@ a.warning:hover {
 /* ---------------- */
 
 .nav-main {
-    background: linear-gradient(0, var(--grey900), var(--grey800));
+    background: linear-gradient(-45deg, var(--grey900), var(--grey800));
 }
 
 .nav-toggle svg {
