@@ -31,6 +31,7 @@ var loadCaptcha = function loadCaptcha(e) {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
+    // script.src= 'https://challenges.cloudflare.com/turnstile/v0/api.js'
     script.src = 'https://www.google.com/recaptcha/api.js';
     head.appendChild(script);
 };
