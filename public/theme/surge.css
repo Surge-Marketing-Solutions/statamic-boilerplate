@@ -237,9 +237,9 @@ body {
     background: var(--lightGrey);
 }
 
-body::after {
+body::before {
     content: '';
-    background: url(/assets/background-dots.svg) no-repeat;
+    background: url(/background-dots.svg) no-repeat;
     background-size: cover;
     position: fixed;
     width: 100%;
