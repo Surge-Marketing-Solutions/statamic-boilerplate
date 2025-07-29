@@ -1,15 +1,11 @@
 {{ if buttons }}
     <div class="btns">
         {{ buttons }}
-            <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="btn">
+            <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="btn {{ pill_styling ? 'pill-btn' : '' }} {{ outline_styling ? 'outline-btn' : '' }}">
                 {{ if icon }}
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
-                        <source media="(max-width: 1199px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
-                        <img loading="lazy" src="{{ icon }}" width="100%" height="100%" alt="{{ icon:alt }}">
-                    </picture>
+                    {{ svg src="{icon}"}}
                 {{ endif }}
-
+                
                 {{ text }}
             </a>
         {{ /buttons }}

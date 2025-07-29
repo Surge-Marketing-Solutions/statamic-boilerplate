@@ -3,171 +3,92 @@ fields:
   -
     handle: video
     field:
-      collapse: false
-      previews: true
       max_sets: 1
-      fullscreen: true
+      type: replicator
+      display: Video
       sets:
         new_set_group:
           display: 'New Set Group'
-          instructions: null
-          icon: null
           sets:
             video:
               display: Video
-              instructions: null
-              icon: null
               fields:
                 -
                   handle: embed_video
                   field:
-                    default: false
                     type: toggle
                     display: 'Embed Video'
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                 -
                   handle: embed_code
                   field:
-                    input_type: text
-                    antlers: false
                     type: text
                     display: 'Embed Code'
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                     if:
                       embed_video: 'equals true'
                 -
                   handle: thumbnail
                   field:
                     max_files: 1
-                    mode: list
                     container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
                     type: assets
                     display: Thumbnail
                     width: 50
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                     unless:
                       embed_video: 'equals true'
                 -
                   handle: mp4
                   field:
                     max_files: 1
-                    mode: list
                     container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
                     type: assets
                     display: MP4
                     width: 50
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                     unless:
                       embed_video: 'equals true'
                 -
                   handle: hvc1
                   field:
                     max_files: 1
-                    mode: list
                     container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
                     type: assets
                     display: HVC1
                     width: 50
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                     unless:
                       embed_video: 'equals true'
                 -
                   handle: webm
                   field:
                     max_files: 1
-                    mode: list
                     container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
                     type: assets
                     display: WebM
                     width: 50
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                     unless:
                       embed_video: 'equals true'
                 -
                   handle: autoplay
                   field:
-                    default: false
                     type: toggle
                     display: Autoplay
                     width: 33
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                     if:
                       embed_video: 'equals false'
                     instructions: 'Allows the video to autoplay'
                 -
                   handle: loop
                   field:
-                    default: false
                     type: toggle
                     display: Loop
                     width: 33
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
+                    if:
+                      embed_video: 'equals false'
                     instructions: 'If autoplay is enabled this is recommended for a continuous.'
                 -
                   handle: muted
                   field:
-                    default: false
                     type: toggle
                     display: Muted
                     width: 33
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
+                    if:
+                      embed_video: 'equals false'
                     instructions: 'If autoplay is enabled this must be enabled to work on mobiles.'
-      type: replicator
-      display: Video
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false

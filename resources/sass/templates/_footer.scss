@@ -2,6 +2,8 @@
 
 footer {
     .top {
+        padding: 0 16px;
+        
         .wrapper {
             @include flex(center, center, column);
             gap: 16px;
