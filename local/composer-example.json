@@ -1,6 +1,6 @@
 {
     "require": {
-        "surge/redirect-urls": "*"
+        "surgems/redirect-urls": "*"
     },
     "repositories": [
         {
