@@ -19,7 +19,7 @@ export_paths:
   - package.json
   - vite.config.js
 dependencies:
-  statamic/cms: 5.7.10
+  statamic/cms: 5.73.10
   php: ^8.2
   aryehraber/statamic-captcha: ^1.13
   joetannenbaum/antlers-stack-tags: ^0.1.0
