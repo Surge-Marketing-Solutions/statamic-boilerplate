@@ -43,15 +43,3 @@ fields:
             type: toggle
             display: 'New Tab'
             width: 33
-        -
-          handle: pill_styling
-          field:
-            type: toggle
-            display: 'Pill Styling'
-            width: 33
-        -
-          handle: outline_styling
-          field:
-            type: toggle
-            display: 'Outline Styling'
-            width: 33

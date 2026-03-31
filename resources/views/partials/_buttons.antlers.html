@@ -1,7 +1,7 @@
 {{ if buttons }}
     <div class="btns">
         {{ buttons }}
-            <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="btn {{ pill_styling ? 'pill-btn' : '' }} {{ outline_styling ? 'outline-btn' : '' }}">
+            <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="btn">
                 {{ if icon }}
                     {{ svg src="{icon}"}}
                 {{ endif }}

@@ -14,12 +14,13 @@
             --green: #3AAA35;
             --lightgreen: #A9DC43;
             --grey800: #252527;
+            --grey900: #0F0F10;
             --cui-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
 
         body {
             align-items: center !important;
-            background: linear-gradient(-45deg, var(--green), var(--lightgreen));
+            background: linear-gradient(-45deg, var(--grey900), var(--grey800));
 
             flex-direction: row !important;
 
@@ -113,7 +114,6 @@
             content: '';
             display: block;
             background: url(/surge-logo.svg) no-repeat;
-            filter: contrast(0) brightness(0);
             background-size: contain;
             width: 300px;
             height: 100px;
@@ -121,9 +121,10 @@
 
         div.content {
             text-align: center !important;
+            color: white;
 
             a {
-                color: var(--grey800);
+                color: var(--green);
             }
 
             a:hover {
@@ -135,9 +136,10 @@
             position: relative;
             top: -5vh;
             text-align: center !important;
+            color: white;
 
             a {
-                color: var(--grey800);
+                color: var(--green);
             }
 
             a:hover {
