@@ -11,6 +11,19 @@
 }
 
 // Helpers
+@mixin cover($w: 100%, $h: 100%, $type: cover, $pos: center) {
+    width: $w;
+    height: $h;
+    object-fit: $type;
+    object-position: $pos;
+}
+
+@mixin contain($w: 100%, $h: 100%, $type: contain, $pos: center) {
+    width: $w;
+    height: $h;
+    object-fit: $type;
+    object-position: $pos;
+}
 
 @mixin flex($ai: auto, $jc: auto, $fd: auto, $fw: auto) {
     display: flex;

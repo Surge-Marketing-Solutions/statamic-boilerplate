@@ -22,8 +22,12 @@ header {
             gap: 20px;
         }
 
-        .logo, .logo img {
-            @include svg-size(fit-content, 50px);
+        .logo {
+            @include svg-size(150px, 50px);
+
+            img {
+                @include contain();
+            }
         }
 
         .inner {
@@ -175,8 +179,8 @@ header {
         nav {
             height: $nav-height-lg;
     
-            .logo, .logo img {
-                @include svg-size(fit-content, 71px);
+            .logo {
+                @include svg-size(180px, 71px);
             }
     
             .inner {

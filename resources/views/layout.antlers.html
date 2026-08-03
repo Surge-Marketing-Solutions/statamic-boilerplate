@@ -20,7 +20,7 @@
         {{ vite src="resources/js/site.js|resources/js/swiper.js" }}
         {{ stack:scripts }}
 
-        {{ if environment == 'staging' }}
+        {{ if environment != 'production' }}
             {{ plugins:staging_scripts }}
         {{ elseif environment == 'production' }}
             {{ plugins:live_scripts }}
