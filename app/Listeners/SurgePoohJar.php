@@ -12,11 +12,8 @@ class SurgePoohJar
 {
     public function handle(FormSubmitted $event): void
     {
-        $inputCheck = request()->input('first_name_alt');
-
-        \Log::info('Input check - ' . json_encode($inputCheck));
-
-        if( $inputCheck ) {
+        if (request()->filled('first_name_alt')) {
+            \Log::info('Input check - ' . json_encode($inputCheck));
             abort(404);
         }
     }

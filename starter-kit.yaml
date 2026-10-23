@@ -12,7 +12,7 @@ export_paths:
   - public/logo.svg
   - public/background-dots.svg
   - app/Listeners
-  - app/providers
+  - app/Providers
   - resources
   - .env.example
   - .gitattributes
