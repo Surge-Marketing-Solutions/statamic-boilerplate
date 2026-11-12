@@ -27,6 +27,12 @@
         section {
             position: relative;
             padding: 40px 16px;
+
+            &.not-found {
+                .btns {
+                    margin-top: 2rem;
+                }
+            }
         }
         
         .wrapper {
